@@ -14,15 +14,33 @@
     <header>
         <h1>Seal me the weather</h1>
         <nav>
-            <a href= "http://127.0.0.1:5500/script.html#" target="_blank">Home</a>
+            <a href= "http://127.0.0.1:5500/weather.html#" target="_blank">Home</a>
             <a href= "#">Log out</a>
         </nav>
     </header>
     <div id= "container">
-        <form id= "form">
-            <input id= "search" type= "text">
-            <button>Add</button>
-        </form>
+            <div id= "cities">
+                <div id= "city">
+                    <p>nom de la ville</p>
+                    <i class= "fa-thin fa-clouds" ></i>
+                    <p>31° température actuelle</p>
+                </div>
+                <div id= "city">
+                    <p>nom de la ville</p>
+                    <i class= "fa-thin fa-clouds" ></i>
+                    <p>31° température actuelle</p>
+                </div>
+                <form id= "form">
+                    <input id= "search" type= "text">
+                    <button>Add</button>
+                </form>
+            </div>
+        <div id= "city_selected">
+            <p>nom de la ville</p>
+            <i class="fa-thin fa-clouds"></i>
+            <p>31° température actuelle</p>
+            <p>graphique jour par jour</p>
+        </div>
     </div>
     <footer>
         <p>Coded by Mandy Thorel</p>

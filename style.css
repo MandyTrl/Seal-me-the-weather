@@ -25,7 +25,7 @@ h1 {
 /*        NAVBAR        */
 nav {
     background-color: #ffe69b;
-    font-weight: 650;
+    font-weight: 550;
     height: fit-content;
     border-radius: 20px;
     font-size: 1.2em;
@@ -44,17 +44,43 @@ nav a:hover {
     color: black;
 }
 nav a:active {
-    color: #0DB3CF;;
+    font-style: italic;
+    color: black;
 }
 
 #container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    width: 90%;
+    margin-top: 0.5em;
 }
 
 #form {
     display: inline;
     padding: 10px;
+}
+
+#city_selected {
+    width: 60%;
+    border-radius: 25px;
+    padding: 1em;
+    margin: 1em;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    background-image: url("/sources/paris.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+#cities {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    background-color: rgb(255, 255, 255, 0.3);
+    border-radius: 25px;
+    padding: 1em;
+    margin: 1em;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
 }
 
 /*        IMAGES        */
