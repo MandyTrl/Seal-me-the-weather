@@ -22,6 +22,12 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    color: white;
+    font-size: 2.2em;
+    letter-spacing: 0.15em;
+}
+
 /*        NAVBAR        */
 nav {
     background-color: #ffe69b;
@@ -55,6 +61,13 @@ nav a:active {
     margin-top: 0.5em;
 }
 
+#city {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
 #form {
     display: inline;
     padding: 10px;
@@ -62,25 +75,53 @@ nav a:active {
 
 #city_selected {
     width: 60%;
-    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     padding: 1em;
-    margin: 1em;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    margin: 0 0.1em;
+    color: white;
+}
+
+#city_header {
+    display: flex;
+    justify-content: space-between;
     background-image: url("/sources/paris.jpg");
     background-size: cover;
     background-position: center;
-    color: white;
+    border-radius: 25px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    padding: 1em;
+}
+
+#name_of_the_city {
+    display: flex;
+    align-items: center;
+}
+
+#week_weather {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 25px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.098);
 }
 
 #cities {
     display: flex;
     flex-direction: column;
     width: 40%;
-    background-color: rgb(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.098);
     border-radius: 25px;
     padding: 1em;
     margin: 1em;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+#bar {
+    background-color: #0DB3CF;
+    height: 0.1em;
 }
 
 /*        IMAGES        */

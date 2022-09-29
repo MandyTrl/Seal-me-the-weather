@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4ca93e8f1a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Seal me the weather</title>
 </head>
@@ -20,15 +21,21 @@
     </header>
     <div id= "container">
             <div id= "cities">
-                <div id= "city">
-                    <p>nom de la ville</p>
-                    <i class= "fa-thin fa-clouds" ></i>
-                    <p>31° température actuelle</p>
+                <div id= "city_list_container">
+                    <div id= "city">
+                        <p>nom de la ville</p>
+                        <i class= "fa-solid fa-cloud"></i>
+                        <p>31° température actuelle</p>
+                    </div>
+                    <div id= "bar"></div>
                 </div>
-                <div id= "city">
-                    <p>nom de la ville</p>
-                    <i class= "fa-thin fa-clouds" ></i>
-                    <p>31° température actuelle</p>
+                <div id= "city_list_container">
+                    <div id= "city">
+                        <p>nom de la ville</p>
+                        <i class= "fa-solid fa-cloud"></i>
+                        <p>31° température actuelle</p>
+                    </div>
+                    <div id= "bar"></div>
                 </div>
                 <form id= "form">
                     <input id= "search" type= "text">
@@ -36,10 +43,46 @@
                 </form>
             </div>
         <div id= "city_selected">
-            <p>nom de la ville</p>
-            <i class="fa-thin fa-clouds"></i>
-            <p>31° température actuelle</p>
+            <div id= "city_header">
+                <div id= "name_of_the_city">
+                    <i class="fa-solid fa-location-dot 2xs" style= "padding-right: 0.4em;"></i>
+                    <h2>City</h2>
+                </div>
+                <div id= "weather_of_the_day">
+                    <p>31°</p>
+                    <i class="fa-solid fa-cloud fa-xl fa-beat" style= "--fa-animation-duration: 4s"></i>
+                </div>
+                <div id= "time">
+                    <p>29/09/2022</p>
+                    <p>17:59</p>
+                </div>
+            </div>
+            <div id= "week_weather">
+                <div id= "monday">
+                    <p>Monday</p>
+                </div>
+                <div id= "tuesday">
+                    <p>Tuesday</p>
+                </div>
+                <div id= "wednesday">
+                    <p>Wednesday</p>
+                </div>
+                <div id= "thursday">
+                    <p>Thursday</p>
+                </div>
+                <div id= "friday">
+                    <p>Friday</p>
+                </div>
+                <div id= "saturday">
+                    <p>Saturday</p>
+                </div>
+                <div id= "sunday">
+                    <p>Sunday</p>
+                </div>
+            </div>
             <p>graphique jour par jour</p>
+            <p>Lever du jour</p>
+            <p>Coucher du soleil</p>
         </div>
     </div>
     <footer>
