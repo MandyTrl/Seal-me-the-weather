@@ -18,7 +18,8 @@ h1 {
     font-family: "Anton", sans-serif;
     color: white;
     font-size: 4em;
-    letter-spacing: 0.05em;
+    font-weight: 570;
+    letter-spacing: 0.02em;
     text-align: center;
 }
 
@@ -28,7 +29,7 @@ h2 {
     letter-spacing: 0.1em;
 }
 
-/*        NAVBAR        */
+/*        [ NAVBAR ]        */
 nav {
     background-color: #ffe69b;
     font-weight: 550;
@@ -36,6 +37,7 @@ nav {
     border-radius: 20px;
     font-size: 1.2em;
     padding: 8px 17px;
+    margin-bottom: 1.3em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -52,6 +54,31 @@ nav a:hover {
 nav a:active {
     font-style: italic;
     color: black;
+}
+
+button {
+    font-family: "Quicksand", sans-serif;
+    padding: 0.4em 0.5em;
+    letter-spacing: 0.2em;
+    font-size: 0.6em;
+    background-color: rgb(8, 57, 67);
+    color: white;
+    border-color: transparent;
+    margin-top: 0.3em;
+    transition: all .5s;
+}
+button:hover {
+    background-color: rgb(255, 230, 155);
+    background-color: rgb(8, 57, 67);
+    color: white;
+    letter-spacing: 0.5em;
+    cursor: pointer;
+}
+button:active {
+    background-color: #0DB3CF;
+    color: white;
+    cursor: pointer;
+    transform: translate(0px,5px);
 }
 
 #container {
@@ -80,19 +107,23 @@ nav a:active {
     justify-content: space-between;
     padding: 1em;
     margin: 0 0.1em;
-    color: white;
+    background-image: url("../sources/Paris.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
 }
 
 #city_header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-image: url("/sources/paris.jpg");
+    /* background-image: url("../sources/Paris.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     border-radius: 25px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); */
     padding: 0.2em 1.2em;
+    color: white;
 }
 #name_of_the_city {
     display: flex;
@@ -109,22 +140,34 @@ nav a:active {
     border-radius: 25px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
     padding: 1em;
-    background-color: rgba(255, 255, 255, 0.098);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
-#sunset_hours {
+#sunset_hour {
     display: flex;
+    justify-content: space-between;
+    border-radius: 25px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#graphic {
+    border-radius: 25px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 #cities {
     display: flex;
     flex-direction: column;
     width: 40%;
-    background-color: rgba(255, 255, 255, 0.098);
     border-radius: 25px;
     padding: 1em;
-    margin: 1em;
+    margin: 0 1em;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    background-color: white;
 }
 
 #bar {
