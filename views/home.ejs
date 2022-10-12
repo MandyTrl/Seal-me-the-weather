@@ -8,39 +8,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4ca93e8f1a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles/styleHome.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/styleHome.css" />
     <title>Seal me the weather</title>
 </head>
 <body>
     <header>
         <h1>Seal me the weather</h1>
-        <img id= "logo" src= "sources/seal_logo.png" alt= "logo seal weather" />
+        <img id= "logo" src= "/images/seal_logo.png" alt= "logo seal weather" />
     </header>
     <div id= "container">
         <div id= "subscription">
             <div id= "head">
                 <h2>New seal ?</h2>
-                <img id= "img" src= "sources/seal1.jpg" alt= "seal cute" />
+                <img id= "img" src= "/images/seal1.jpg" alt= "seal cute" />
             </div>
-            <form action= "/signUp" method= "post">
-                <input id= "input_form" 
+            <form action= "/signup" method= "post">
+                <input class= "input_form" 
                 type= "text" 
-                name= "first name" 
+                name= "username" 
                 placeholder= "Username" 
                 required>
-                <input id= "input_form" 
+                <input class= "input_form" 
                 type= "email" 
                 name= "email" 
                 placeholder= "Email" 
                 autocomplete= "email" 
                 required>
-                <input id= "input_form" 
-                name= "paswword" 
+                <input class= "input_form" 
+                type= "text"
+                name= "password" 
                 placeholder= "Choose a password" 
                 required>
-                <input id= "input_form" 
+                <input class= "input_form" 
                 type= "text" 
-                name= "city" 
+                name= "location" 
                 placeholder= "City location">
                 <button>Submit</button>
             </form>
@@ -48,16 +49,16 @@
         <div id= "login">
             <div id= "head">
                 <h2>Welcome Back !</h2>
-                <img id= "img" src= "sources/seal2.jpg" alt= "seal cute sea" />
+                <img id= "img" src= "/images/seal2.jpg" alt= "seal cute sea" />
             </div>
-            <form action= "/signIn" method= "post">
-                <input id= "input_form" 
+            <form action= "/signin" method= "post">
+                <input class= "input_form" 
                 type= "email" 
                 name= "email" 
                 placeholder= "Email" 
                 autocomplete= "email" 
                 required>
-                <input id= "input_form" 
+                <input class= "input_form" 
                 type= "password"  
                 name= "paswword" 
                 placeholder= "Password" 
