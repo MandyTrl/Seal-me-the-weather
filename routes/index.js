@@ -1,31 +1,32 @@
 const express = require('express');
 const router = express.Router();
 const userModel = require("./bdd");
+let error = []; //Permet de push n'importe quel msg d'erreur
+
 //request : infos envoyées par le user, response : renvoie l'info au user //
 ///           [ GET LOGIN PAGE ]            ///
 router.get('/', function(req, res, next) {
   res.render('home');
 });
 
-// ///           [ GET HOME PAGE ]            ///
-// router.get('/home', function(req, res, next) {
-//   res.render('weather');
-// });
-
-
 ///           [ CONNECTION, user reconized + dashboard access ]            ///
 router.post('/signin', async function(req, res, next) {
-  let emailFront = req.body.email;
-  let passwordFront = req.body.password;
-  let user = await userModel.find( { email: emailFront } ); //Récupère tous les documents dont l'email correspond à celui saisi dans le formulaire
-  console.log("user = ", user);
-
-  res.render('weather', { user: user });
+  let email = req.body.email;
+  let password = req.body.password;
+  let user = await userModel.find( { email: email, password: password } ); //Récupère tous les documents dont l'email et le mdp correspondent à ceux saisis dans le formulaire
+  console.log(user.username)
+  if (user){
+    res.render('weather', { username : `${user.username}` } );
+    // res.json( { username : user.username } );
+  }
+  else {
+    error.push("Il semblerait que vos informations soient incorrects ou qu'aucun compte n'ai été créé")
+    res.render('home', { error });
+  }
 });
 
 ///           [ INSCRIPTION, user added to BDD + dashboard access ]            ///
 router.post('/signup', async function(req, res, next) {
-  console.log("data = ", req.body);
   let newUser = new userModel ({
     username: req.body.username,
     email: req.body.email,
@@ -36,6 +37,5 @@ router.post('/signup', async function(req, res, next) {
   console.log("user saved = ", userSaved);
   res.render('weather', { title: 'Express' });
 });
-
 
 module.exports = router;

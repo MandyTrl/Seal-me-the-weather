@@ -8,7 +8,7 @@ const options = {
  }
 
 ///           [ CONNEXION BDD ]            ///
- mongoose.connect("mongodb+srv://MandyTrl:Demacia.78@personnalprojects.9nowbrs.mongodb.net/?retryWrites=true&w=majority",
+ mongoose.connect("mongodb+srv://MandyTrl:Demacia.78@personnalprojects.9nowbrs.mongodb.net/?retryWrites=true&w=majority", {dbName: "SealMyWeather"},
     options,        
     function(err) {
      console.log(err);
